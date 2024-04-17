@@ -1,0 +1,80 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__clz {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  display: flex;
+  /* Utilisez flex pour placer les éléments sur la même ligne */
+  justify-content: space-between;
+  /* Pour espacer les éléments sur la ligne */
+  align-items: center;
+}
+
+.close-button {
+  color: #0a0a0a;
+  /* Couleur du texte du bouton × */
+  background: none;
+  /* Fond transparent pour le bouton × */
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+
+  left: 40px;
+  cursor: pointer;
+
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.options img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.time-input {
+  margin-bottom: 10%;
+  border-color: black;
+  height: 50px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 8%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button2 {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  /* pour rendre le texte blanc, afin qu'il soit visible sur le fond bleu */
+  /* Vous pouvez également ajouter d'autres styles ici selon vos besoins */
+}
