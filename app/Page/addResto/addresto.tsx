@@ -6,6 +6,10 @@ export default function Addresto() {
   const [image, setImage] = useState("");
   const [PostalCode, setPostalCode] = useState("");
   const [Company, setCompany] = useState("");
+  const [latitude, setlatitude] = useState("");
+  const [longitude, setlongitude] = useState("");
+  const [closingTime, setclosingTime] = useState("");
+  const [openingTime, setopeningTime] = useState("");
   const [Address, setAddress] = useState("");
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -22,12 +26,12 @@ export default function Addresto() {
           Address: Address,
           Company: Company,
           Country: "FRANCE",
-          latitude: 48.76583,
-          longitude: 2.07887,
+          latitude: latitude,
+          longitude: longitude,
           PostalCode: PostalCode,
           Responsible: "",
-          closingTime: " 23:00",
-          openingTime: "10:30",
+          closingTime: closingTime,
+          openingTime: openingTime,
         },
         card: {
           etat: "En attente",
@@ -2233,6 +2237,52 @@ export default function Addresto() {
             required
           />
         </div>
+
+        <div className="inputContainer">
+          <label>latitude</label>
+          <input
+            placeholder="latitude"
+            id="latitude"
+            className="inputField"
+            type="text"
+            onChange={(e) => setlatitude(e.target.value)}
+            required
+          />
+        </div>
+        <div className="inputContainer">
+          <label>longitude</label>
+          <input
+            placeholder="longitude"
+            id="longitude"
+            className="inputField"
+            type="text"
+            onChange={(e) => setlongitude(e.target.value)}
+            required
+          />
+        </div>
+        <div className="inputContainer">
+          <label>openingTime</label>
+          <input
+            placeholder="openingTime"
+            id="openingTime"
+            className="inputField"
+            type="text"
+            onChange={(e) => setopeningTime(e.target.value)}
+            required
+          />
+        </div>
+        <div className="inputContainer">
+          <label>closingTime</label>
+          <input
+            placeholder="closingTime"
+            id="closingTime"
+            className="inputField"
+            type="text"
+            onChange={(e) => setclosingTime(e.target.value)}
+            required
+          />
+        </div>
+
         <Button onClick={handleSubmit}>add</Button>
       </form>
     </div>
