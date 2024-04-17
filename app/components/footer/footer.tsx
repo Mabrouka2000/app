@@ -1,89 +1,108 @@
-// components/Footer.js
-
 import React from "react";
-import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import "./style.css";
-const Footer = () => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import "./footer.css";
+
+function Footer() {
   return (
-    <footer id="footer" className="footer">
-      <div className="container">
-        <div className="row gy-3">
-          {/* Address Section */}
-          <div className="col-lg-3 col-md-6 d-flex">
-            <i className="bi bi-geo-alt icon"></i>
-            <div>
-              <h4>Address</h4>
-              <p>
-                A108 Adam Street <br />
-                New York, NY 535022 - US
-                <br />
-              </p>
-            </div>
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="">
+          <br />
+          <h5 style={{ marginLeft: "-12px" }}>Télécharger notre application</h5>
+          <br />
+          <div>
+            {/* <ul className="social-icon"> */}
+            {/* <ul> */}
+            <a href="https://play.google.com/store/apps/details?id=com.softavera.pizzatime&hl=ln">
+              <img
+                src="https://www.commande-pizzatime.fr/CESARWEB_WEB/play_store-icon.png"
+                alt="play Store"
+                width="237px"
+                height="82px"
+              />
+            </a>
+            <br />
+            <br />
+            <a href="https://apps.apple.com/us/app/pizza-time-france/id1556496063">
+              <img
+                src="https://www.commande-pizzatime.fr/CESARWEB_WEB/app_store_icon.png"
+                alt="Google Play Store"
+                width="237px"
+                height="82px"
+              />
+            </a>
+            {/* </ul> */}
+            {/* </ul> */}
           </div>
+        </div>
 
-          {/* Reservations Section */}
-          <div className="col-lg-3 col-md-6 footer-links d-flex">
-            <i className="bi bi-telephone icon"></i>
-            <div>
-              <h4>Reservations</h4>
-              <p>
-                <strong>Phone:</strong> +1 5589 55488 55
-                <br />
-                <strong>Email:</strong> info@example.com
-                <br />
-              </p>
-            </div>
-          </div>
+        <div className="footer-links">
+          {/* <ul> */}
+          <br />
+          <br />
+          <br />
+          <a href="" style={{ cursor: "pointer" }}>
+            Mentions légales
+          </a>
+          <br />
+          <br />
+          <a>Politique de confidentialité</a>
+          <br />
+          <br />
+          <a>CGV</a>
+          <br />
+          <br />
+          <a>CGU</a>
+          {/* </ul> */}
+        </div>
 
-          {/* Opening Hours Section */}
-          <div className="col-lg-3 col-md-6 footer-links d-flex">
-            <i className="bi bi-clock icon"></i>
-            <div>
-              <h4>Opening Hours</h4>
-              <p>
-                <strong>Mon-Sat: 11AM</strong> - 23PM
-                <br />
-                Sunday: Closed
-              </p>
-            </div>
-          </div>
+        <div className="footer-column">
+          <h4 style={{ marginLeft: "10px" }}>Suivez-nous</h4>
+          <div>
+            {/* <ul className="social-icons"> */}
+            <li>
+              <a href="https://www.facebook.com/PizzaTimeFrance/">
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  height="35px"
+                  width="40px"
+                  className="icon facebook-icon"
+                />
+              </a>
+            </li>
 
-          {/* Follow Us Section */}
-          <div className="col-lg-3 col-md-6 footer-links">
-            <h4>Follow Us</h4>
-            <div className="social-links d-flex">
-              <a href="#" className="twitter">
-                <FaTwitter />
+            <li>
+              <a href="https://www.instagram.com/pizzatimefrance/">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  height="35px"
+                  width="35px"
+                  // className="icon instagram-icon"
+                />
               </a>
-              <a href="#" className="facebook">
-                <FaFacebook />
-              </a>
-              <a href="#" className="instagram">
-                <FaInstagram />
-              </a>
-              <a href="#" className="linkedin">
-                <FaLinkedin />
-              </a>
-            </div>
+            </li>
+            {/* </ul> */}
           </div>
         </div>
       </div>
-
-      {/* Copyright and Credits Section */}
-      <div className="container">
-        <div className="copyright">
-          &copy; Copyright{" "}
-          <strong>
-            <span>Yummy</span>
-          </strong>
-          . All Rights Reserved
-        </div>
-        <div className="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      <div className="footer-bottom">
+        <p style={{ marginLeft: "185px" }}>
+          Tous droits réservés - ® 2024 V 3.1{" "}
+        </p>
+        <p style={{ marginLeft: "185px" }}>
+          Softavera N°1 des solutions d encaissement, caisse tactile, borne de
+          commande, click & collect, site web commande en ligne..., plus d’infos
+          :{""}
+          <a href="https://softavera.fr/">www.softavera.fr</a>
+        </p>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
